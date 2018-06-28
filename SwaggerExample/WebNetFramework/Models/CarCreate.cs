@@ -10,9 +10,16 @@ namespace WebNetFramework.Models
         /// <summary>
         /// License plate number in format ABC-123
         /// </summary>
-        /// <example>ABC-123</example>
+        /// <example>AAA-111</example>
         [Required]
         [RegularExpression("[A-Z]{3}-[0-9]{3}", ErrorMessage = "Plate number must be in format ABC-123")]
         public string PlateNumber { get; set; }
+
+        /// <summary>
+        /// Color of car
+        /// </summary>
+        /// <example>Blue</example>
+        [Required]
+        public CarColor Color { get; set; }
     }
 }

@@ -16,5 +16,11 @@
         /// </summary>
         /// <example>ABC-123</example>
         public string PlateNumber { get; set; }
+
+        /// <summary>
+        /// Color of car
+        /// </summary>
+        /// <example>Red</example>
+        public CarColor Color { get; set; }
     }
 }

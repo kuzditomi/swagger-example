@@ -82,7 +82,8 @@ namespace WebNetFramework.Controllers
             return Ok(new Car
             {
                 Id = 2,
-                PlateNumber = car.PlateNumber
+                PlateNumber = car.PlateNumber,
+                Color = car.Color
             });
         }
     }

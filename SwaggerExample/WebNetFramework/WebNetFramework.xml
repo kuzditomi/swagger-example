@@ -47,6 +47,32 @@
             </summary>
             <example>ABC-123</example>
         </member>
+        <member name="P:WebNetFramework.Models.Car.Color">
+            <summary>
+            Color of car
+            </summary>
+            <example>Red</example>
+        </member>
+        <member name="T:WebNetFramework.Models.CarColor">
+            <summary>
+            Predefinied list of colors
+            </summary>
+        </member>
+        <member name="F:WebNetFramework.Models.CarColor.Red">
+            <summary>
+            #ff0000
+            </summary>
+        </member>
+        <member name="F:WebNetFramework.Models.CarColor.Green">
+            <summary>
+            #00ff00
+            </summary>
+        </member>
+        <member name="F:WebNetFramework.Models.CarColor.Blue">
+            <summary>
+            #0000ff
+            </summary>
+        </member>
         <member name="T:WebNetFramework.Models.CarCreate">
             <summary>
             Used in car creation request
@@ -56,7 +82,13 @@
             <summary>
             License plate number in format ABC-123
             </summary>
-            <example>ABC-123</example>
+            <example>AAA-111</example>
+        </member>
+        <member name="P:WebNetFramework.Models.CarCreate.Color">
+            <summary>
+            Color of car
+            </summary>
+            <example>Blue</example>
         </member>
     </members>
 </doc>
