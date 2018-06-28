@@ -118,6 +118,7 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\CarCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

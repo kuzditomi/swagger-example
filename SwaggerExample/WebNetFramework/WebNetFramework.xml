@@ -16,6 +16,20 @@
             <response code="200">All cars</response>
             <returns></returns>
         </member>
+        <member name="M:WebNetFramework.Controllers.CarController.GetCar(System.Int32)">
+            <summary>
+            Returns car with given Id
+            </summary>
+            <param name="id">Unique id of car</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebNetFramework.Controllers.CarController.AddCar(WebNetFramework.Models.CarCreate)">
+            <summary>
+            Adds new car to system with given plate number
+            </summary>
+            <param name="car">Car creation data</param>
+            <returns></returns>
+        </member>
         <member name="T:WebNetFramework.Models.Car">
             <summary>
             Holds wehicle data
@@ -27,6 +41,16 @@
             </summary>
         </member>
         <member name="P:WebNetFramework.Models.Car.PlateNumber">
+            <summary>
+            License plate number in format ABC-123
+            </summary>
+        </member>
+        <member name="T:WebNetFramework.Models.CarCreate">
+            <summary>
+            Used in car creation request
+            </summary>
+        </member>
+        <member name="P:WebNetFramework.Models.CarCreate.PlateNumber">
             <summary>
             License plate number in format ABC-123
             </summary>
