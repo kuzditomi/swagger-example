@@ -13,7 +13,23 @@
             <summary>
             Returns all cars
             </summary>
+            <response code="200">All cars</response>
             <returns></returns>
+        </member>
+        <member name="T:WebNetFramework.Models.Car">
+            <summary>
+            Holds wehicle data
+            </summary>
+        </member>
+        <member name="P:WebNetFramework.Models.Car.Id">
+            <summary>
+            Unique identifier in the system
+            </summary>
+        </member>
+        <member name="P:WebNetFramework.Models.Car.PlateNumber">
+            <summary>
+            License plate number in format ABC-123
+            </summary>
         </member>
     </members>
 </doc>

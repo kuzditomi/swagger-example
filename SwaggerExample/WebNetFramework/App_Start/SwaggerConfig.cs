@@ -18,29 +18,15 @@ namespace WebNetFramework
                         var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
                         var commentsFileName = Assembly.GetExecutingAssembly().GetName().Name + ".xml";
                         var commentsFile = Path.Combine(baseDirectory, commentsFileName);
-
-                        // By default, the service root url is inferred from the request used to access the docs.
-                        // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
-                        // resolve correctly. You can workaround this by providing your own code to determine the root URL.
-                        //
-                        //c.RootUrl(req => GetRootUrlFromAppConfig());
-
+                        
                         // If schemes are not explicitly provided in a Swagger 2.0 document, then the scheme used to access
                         // the docs is taken as the default. If your API supports multiple schemes and you want to be explicit
                         // about them, you can use the "Schemes" option as shown below.
                         //
                         //c.Schemes(new[] { "http", "https" });
 
-                        // Use "SingleApiVersion" to describe a single version API. Swagger 2.0 includes an "Info" object to
-                        // hold additional metadata for an API. Version and title are required but you can also provide
-                        // additional fields by chaining methods off SingleApiVersion.
-                        //
                         c.SingleApiVersion("v1", "WebNetFramework");
-
-                        // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
-                        //
-                        //c.PrettyPrint();
-
+                        
                         // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
                         // In this case, you must provide a lambda that tells Swashbuckle which actions should be
                         // included in the docs for a given API version. Like "SingleApiVersion", each call to "Version"
@@ -52,33 +38,6 @@ namespace WebNetFramework
                         //    {
                         //        vc.Version("v2", "Swashbuckle Dummy API V2");
                         //        vc.Version("v1", "Swashbuckle Dummy API V1");
-                        //    });
-
-                        // You can use "BasicAuth", "ApiKey" or "OAuth2" options to describe security schemes for the API.
-                        // See https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md for more details.
-                        // NOTE: These only define the schemes and need to be coupled with a corresponding "security" property
-                        // at the document or operation level to indicate which schemes are required for an operation. To do this,
-                        // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
-                        // according to your specific authorization implementation
-                        //
-                        //c.BasicAuth("basic")
-                        //    .Description("Basic HTTP Authentication");
-                        //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
-                        //c.ApiKey("apiKey")
-                        //    .Description("API Key Authentication")
-                        //    .Name("apiKey")
-                        //    .In("header");
-                        //
-                        //c.OAuth2("oauth2")
-                        //    .Description("OAuth2 Implicit Grant")
-                        //    .Flow("implicit")
-                        //    .AuthorizationUrl("http://petstore.swagger.wordnik.com/api/oauth/dialog")
-                        //    //.TokenUrl("https://tempuri.org/token")
-                        //    .Scopes(scopes =>
-                        //    {
-                        //        scopes.Add("read", "Read access to protected resources");
-                        //        scopes.Add("write", "Write access to protected resources");
                         //    });
 
                         // Set this flag to omit descriptions for any actions decorated with the Obsolete attribute
@@ -99,11 +58,6 @@ namespace WebNetFramework
                         //
                         //c.OrderActionGroupsBy(new DescendingAlphabeticComparer());
 
-                        // If you annotate Controllers and API Types with
-                        // Xml comments (http://msdn.microsoft.com/en-us/library/b2s063f7(v=vs.110).aspx), you can incorporate
-                        // those comments into the generated docs and UI. You can enable this by providing the path to one or
-                        // more Xml comment files.
-                        //
                         c.IncludeXmlComments(commentsFile);
 
                         // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
