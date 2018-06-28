@@ -1,6 +1,5 @@
 ﻿using Microsoft.Owin;
 using Owin;
-using Swashbuckle.Application;
 using System.Web.Http;
 
 [assembly: OwinStartup(typeof(WebNetFramework.Startup))]

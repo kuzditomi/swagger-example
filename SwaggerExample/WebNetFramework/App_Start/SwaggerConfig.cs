@@ -1,10 +1,8 @@
 using System.Web.Http;
-using WebActivatorEx;
-using WebNetFramework;
-using Swashbuckle.Application;
 using System;
 using System.Reflection;
 using System.IO;
+using Swagger.Net.Application;
 
 namespace WebNetFramework
 {

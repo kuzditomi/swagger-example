@@ -1,4 +1,4 @@
-﻿using Swashbuckle.Swagger.Annotations;
+﻿using Swagger.Net.Annotations;
 using System.Collections.Generic;
 using System.Net;
 using System.Web.Http;
