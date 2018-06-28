@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebNetFramework</name>
+    </assembly>
+    <members>
+        <member name="T:WebNetFramework.Controllers.CarController">
+            <summary>
+            Car related operations
+            </summary>
+        </member>
+        <member name="M:WebNetFramework.Controllers.CarController.GetCars">
+            <summary>
+            Returns all cars
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

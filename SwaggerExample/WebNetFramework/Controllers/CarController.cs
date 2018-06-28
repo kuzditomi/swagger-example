@@ -4,14 +4,16 @@ using WebNetFramework.Models;
 
 namespace WebNetFramework.Controllers
 {
+    /// <summary>
+    /// Car related operations
+    /// </summary>
     [RoutePrefix("api/cars")]
     public class CarController : ApiController
     {
-        public CarController()
-        {
-
-        }
-
+        /// <summary>
+        /// Returns all cars
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("")]
         public IHttpActionResult GetCars()

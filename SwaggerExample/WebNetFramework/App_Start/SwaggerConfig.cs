@@ -2,6 +2,9 @@ using System.Web.Http;
 using WebActivatorEx;
 using WebNetFramework;
 using Swashbuckle.Application;
+using System;
+using System.Reflection;
+using System.IO;
 
 namespace WebNetFramework
 {
@@ -12,6 +15,10 @@ namespace WebNetFramework
             config
                 .EnableSwagger(c =>
                     {
+                        var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                        var commentsFileName = Assembly.GetExecutingAssembly().GetName().Name + ".xml";
+                        var commentsFile = Path.Combine(baseDirectory, commentsFileName);
+
                         // By default, the service root url is inferred from the request used to access the docs.
                         // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
                         // resolve correctly. You can workaround this by providing your own code to determine the root URL.
@@ -97,7 +104,7 @@ namespace WebNetFramework
                         // those comments into the generated docs and UI. You can enable this by providing the path to one or
                         // more Xml comment files.
                         //
-                        //c.IncludeXmlComments(GetXmlCommentsPath());
+                        c.IncludeXmlComments(commentsFile);
 
                         // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
                         // exposed in your API. However, there may be occasions when more control of the output is needed.
