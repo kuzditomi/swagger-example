@@ -1,5 +1,6 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using Swashbuckle.Application;
 using System.Web.Http;
 
 [assembly: OwinStartup(typeof(WebNetFramework.Startup))]
@@ -10,12 +11,15 @@ namespace WebNetFramework
     {
         public void Configuration(IAppBuilder app)
         {
+            // create httpconfig with json formatter only
             var config = new HttpConfiguration();
             config.MapHttpAttributeRoutes();
-
-            // use json formatter only
             config.Formatters.Remove(config.Formatters.XmlFormatter);
 
+            // add swagger
+            SwaggerConfig.Register(config);
+
+            // include webapi
             app.UseWebApi(config);
         }
     }
